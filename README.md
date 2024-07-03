@@ -91,8 +91,19 @@ x, y
 0.98800000,  4.17590000
 0.99600000,  4.23820000
 ```
+In the folder `curves` you find two examples of two .txt files extracted by the characteristic showed before. 
 
 Now that everything is ready, you can run the python script passing the correct command line arguments to compute the parameters of polynomial.
+
+The command line arguments are the following:
+
+| Name              | Type   | Description                       |
+|-------------------|--------|-----------------------------------|
+| first-curve-file  | String | Path to the first curve .txt file |
+| second-curve-file | String | Path to the first curve .txt file |
+| battery-capacity  | Int    | Capacity of the battery in mAh    |
+
+
 
 > [!WARNING]
 > The capacity of the battery MUST be in mAh

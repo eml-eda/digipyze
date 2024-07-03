@@ -154,9 +154,9 @@ def fit_and_plot(R_x_new, R_new, V_OC_x_new, V_OC_new):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Curve fit the R vs. SOC and Voc vs. SOC from the digitized datasheet discharge curves')
-    parser.add_argument('--first-curve-file', type=str, help='Path to CSV file containing digitized discharge curve points for some discharge current')
-    parser.add_argument('--second-curve-file', type=str, help='Path to CSV file containing digitized discharge curve points for a discharge current different from the one used in the first option')
-    parser.add_argument("--battery-capacity", type=int)
+    parser.add_argument('--first-curve-file', type=str, help='Path to CSV file containing digitized discharge curve points for some discharge current', required=True)
+    parser.add_argument('--second-curve-file', type=str, help='Path to CSV file containing digitized discharge curve points for a discharge current different from the one used in the first option', required=True)
+    parser.add_argument("--battery-capacity", type=int, help="Capacity of the battery in mAh", required=True)
 
     args = parser.parse_args()
 
